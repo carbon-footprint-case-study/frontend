@@ -1,7 +1,8 @@
 import React from 'react'
-import TabBar from './homePageComponents/TabBar';
+import TabBar from './TabBar';
 import Calculator from './Calculator';
-import Carousels from './homePageComponents/Carousels'
+import Carousels from './Carousels'
+
 
 function HomePage() {
   return (
@@ -9,7 +10,6 @@ function HomePage() {
         <Carousels/>
         <h1 className='mx-5 my-5'>CARBON FOOTPRINT CALCULATOR</h1>
         <TabBar/>
-        <Calculator/>
     </div>
   )
 }
