@@ -4,7 +4,7 @@ import Food from './images/Food.jpg'
 import Trans1 from './images/Transportation1.png'
 import Co2 from './images/carbon-dioxide.jpg'
 
-function CarouselFadeExample() {
+function Carousels() {
     return (
         <Container>
         <Carousel>
@@ -51,4 +51,4 @@ function CarouselFadeExample() {
     );
 }
 
-export default CarouselFadeExample;
+export default Carousels;
