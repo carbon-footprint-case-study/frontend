@@ -1,7 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function BasicExample() {
+function Calculator() {
+
+
     return (
         <Form className='mx-4'>
             <Form.Group className="mb-3" >
@@ -33,4 +35,4 @@ function BasicExample() {
     );
 }
 
-export default BasicExample;
+export default Calculator;
