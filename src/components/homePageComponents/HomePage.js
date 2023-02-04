@@ -1,17 +1,18 @@
-import React from 'react'
-import TabBar from './TabBar';
-import Calculator from './Calculator';
-import Carousels from './Carousels'
-
+import React from "react";
+import TabBar from "./TabBar";
+import Carousels from "./Carousels";
+import { Container } from "react-bootstrap";
 
 function HomePage() {
   return (
     <div>
-        <Carousels/>
-        <h1 className='mx-5 my-5'>CARBON FOOTPRINT CALCULATOR</h1>
-        <TabBar/>
+      <Carousels />
+      <Container>
+        <h1 style={{textAlign : "center"}} className="mx-5 my-5">CARBON FOOTPRINT CALCULATOR</h1>
+        <TabBar />
+      </Container>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

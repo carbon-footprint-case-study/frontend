@@ -8,8 +8,11 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Co2Icon from '@mui/icons-material/Co2';
 import PanToolIcon from '@mui/icons-material/PanTool';
+import Home from './Home';
+
 function Tabbar() {
   return (
+    <>
     <Tabs
       defaultActiveKey="home"
       id="fill-tab-example"
@@ -17,10 +20,10 @@ function Tabbar() {
       fill
     >
       <Tab eventKey="home" title = {<span><HomeIcon/>Home</span>} >
-        <Calculator title = {"Your Home"}/>
+        <Home />
       </Tab>
       <Tab eventKey="travel"  title = {<span><SubwayIcon/> Travel</span>}>
-        <Calculator title = {"Your fule consumtion"}/>
+        <Calculator/>
       </Tab>
       <Tab eventKey="food" title={<span><FastfoodIcon/> Food</span>}>
         <Calculator/>
@@ -35,6 +38,8 @@ function Tabbar() {
         <Calculator />
       </Tab>
     </Tabs>
+
+    </>
   );
 }
 
