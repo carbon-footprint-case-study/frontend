@@ -13,7 +13,7 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#link">About Us</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
             <NavDropdown title="Information" id="basic-nav-dropdown">
               <NavDropdown.Item href="/information/deforestaion">Deforestation</NavDropdown.Item>
               <NavDropdown.Item href="#">Climate Change</NavDropdown.Item>
