@@ -5,21 +5,23 @@ import HomePage from "./components/homePageComponents/HomePage";
 import Deforestation from "./components/information/Deforestation";
 import MemberCard from "./components/MemberCard";
 import AboutUs from "./components/AboutUs";
-
+import ContactForm from "./components/contactForm/contactform";
 
 function App() {
   return (
     <div className="App">
+      
       <Router>
       <NavBar />
         <Routes>
 
           <Route path="/information/deforestaion" element={<Deforestation />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactForm/>} />
           <Route path="/" element={<HomePage />} />
+          
         </Routes>
       </Router>
-      
 
     </div>
   );
