@@ -1,7 +1,7 @@
-import { Margin } from '@mui/icons-material'
-import { margin } from '@mui/system'
 import React from 'react'
-import { alignPropType } from 'react-bootstrap/esm/types'
+// import { Margin } from '@mui/icons-material'
+// import { margin } from '@mui/system'
+// import { alignPropType } from 'react-bootstrap/esm/types'
 
 
 function InfoLayout(props) {

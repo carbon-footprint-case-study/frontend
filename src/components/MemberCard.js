@@ -1,14 +1,11 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import '../CSS/style.scss'
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
+import '../CSS/style.scss'
+
 function MemberCard(props) {
   const name=props.name
   const mobileNo = props.mobileNo
