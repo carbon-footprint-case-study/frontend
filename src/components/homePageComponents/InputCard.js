@@ -12,11 +12,25 @@ function InputCard(props) {
   const icon = props.icon;
   const title = props.title;
   const units = props.units;
+  const handler = props.handler;
+  const data = props.data
+ 
+
+
+
 
   const [unit, setUnit] = useState(units[0]);
 
   const getData = (ele) => {
-    setValue(ele.target.value);
+    let v = ele.target.value
+    if(isNaN(v) | v < 0){
+      return false
+    }
+    handler(title , v)
+    setValue(v);
+    return true
+    
+    
   };
 
   return (
@@ -34,6 +48,7 @@ function InputCard(props) {
                 aria-label="Text input with dropdown button"
                 type="number"
                 onChange={getData}
+                value = {value}
               />
               <select
                 className="dropdown"
@@ -44,7 +59,8 @@ function InputCard(props) {
                 })}
               </select>
             </InputGroup>
-            <Calculator title={title} unit={unit} value={value} />
+            <Calculator title={title} unit={unit} data = {data} handler = {handler}  
+            />
           </ListGroup.Item>
         </ListGroup>
       </Card>

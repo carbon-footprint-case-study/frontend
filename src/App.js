@@ -6,6 +6,8 @@ import Deforestation from "./components/information/Deforestation";
 import AboutUs from "./components/AboutUs";
 import ContactForm from "./components/contactForm/contactform";
 
+import BarGraph from './components/BarGraph'
+
 function App() {
   return (
     <div className="App">
@@ -21,9 +23,12 @@ function App() {
           
         </Routes>
       </Router>
+      
 
     </div>
   );
 }
 
 export default App;
+
+
