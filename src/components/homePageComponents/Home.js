@@ -3,7 +3,6 @@ import TungstenRoundedIcon from "@mui/icons-material/TungstenRounded";
 import PropaneTankTwoToneIcon from "@mui/icons-material/PropaneTankTwoTone";
 import WaterIcon from "@mui/icons-material/Water";
 import { Col, Container, Row } from "react-bootstrap";
-import InputCard2 from "./InputCard2";
 import InputCard from "./InputCard";
 import BarGraph from "../BarGraph";
 
@@ -97,9 +96,6 @@ class Home extends Component  {
       );
 
     }
-
-  
-
 }
 
 export default Home;

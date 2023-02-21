@@ -20,19 +20,40 @@ else if (props.title === "Electricity") {
 else if (props.title === "Water Usage") {
     if (props.unit === "Rs./month") val = props.value;
     else val = props.value;
-
-
-
-   
-
-    
-
-
-
+  } else if(props.title === "Private Vehicle") {
+    if (props.unit === "litre/month") {
+      switch (props.fuel) {
+        case "Diesel":
+          val = 2.2458*props.value
+          break;
+        case "Petrol":
+          val = 1.9313*props.value
+          break;
+        case "CNG":
+          val = 0.0019*props.value
+          break;
+        default:
+          break;
+      }
+    }
+    else {
+      switch (props.fuel) {
+        case "Diesel":
+          val = 2.2458*props.value/props.milageValue
+          break;
+        case "Petrol":
+          val = 1.9313*props.value/props.milageValue
+          break;
+        case "CNG":
+          val = 0.0019*props.value/props.milageValue
+          break;
+        default:
+          break;
+      }
+    }
+  }
     
 }
-
-
   return (
     <div>
       Your Carbon emission is {val} kg/month from {props.title}

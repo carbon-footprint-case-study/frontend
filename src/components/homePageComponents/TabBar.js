@@ -9,6 +9,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Co2Icon from '@mui/icons-material/Co2';
 import PanToolIcon from '@mui/icons-material/PanTool';
 import Home from './Home';
+import Travel from './Travel';
 
 function Tabbar() {
   return (
@@ -23,7 +24,7 @@ function Tabbar() {
         <Home />
       </Tab>
       <Tab eventKey="travel"  title = {<span><SubwayIcon/> Travel</span>}>
-        <Calculator/>
+        <Travel/>
       </Tab>
       <Tab eventKey="food" title={<span><FastfoodIcon/> Food</span>}>
         <Calculator/>
