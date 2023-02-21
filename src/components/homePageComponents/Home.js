@@ -3,7 +3,6 @@ import TungstenRoundedIcon from "@mui/icons-material/TungstenRounded";
 import PropaneTankTwoToneIcon from "@mui/icons-material/PropaneTankTwoTone";
 import WaterIcon from "@mui/icons-material/Water";
 import { Col, Container, Row } from "react-bootstrap";
-import InputCard2 from "./InputCard2";
 import InputCard from "./InputCard";
 
 function Home() {
@@ -25,7 +24,7 @@ function Home() {
           />
         </Col>
         <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
-          <InputCard2
+          <InputCard
             icon={<PropaneTankTwoToneIcon />}
             title="LPG"
             units={lpgUnit}

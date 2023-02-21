@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
-import Food from './images/Food.jpg'
+import Food1 from './images/Food1.jpeg'
 import Trans1 from './images/Transportation1.png'
 import Co2 from './images/carbon-dioxide.jpg'
 
@@ -11,7 +11,7 @@ function Carousels() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={Food}
+                    src={Food1}
                     alt="First slide"
                 />
                 {/* <Carousel.Caption>
@@ -24,10 +24,10 @@ function Carousels() {
                 <img
                     className="d-block w-100"
                     src={Trans1}
-                    alt="Third slide"
+                    alt="Second slide"
                 />
                 {/* <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    <h3>Second slide label</h3>
                     <p>
                         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                     </p>
