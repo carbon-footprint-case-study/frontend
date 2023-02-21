@@ -1,12 +1,7 @@
 import React from "react";
-import { useState } from "react";
 
 function Calculator(props) {
   let val;
-
-  
- 
-
 
   if (props.title === "LPG") {
     if (props.unit === "cylinder/month") val = props.value * 45.8422;
@@ -52,13 +47,10 @@ else if (props.title === "Water Usage") {
       }
     }
   }
-    
-}
   return (
     <div>
       Your Carbon emission is {val} kg/month from {props.title}
     </div>
-  );
+      );
 }
-
 export default Calculator;
