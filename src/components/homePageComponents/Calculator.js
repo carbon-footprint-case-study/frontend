@@ -53,12 +53,12 @@ else if (props.title === "Water Usage") {
     }
   }
     
-}
   return (
     <div>
       Your Carbon emission is {val} kg/month from {props.title}
     </div>
   );
 }
+
 
 export default Calculator;
