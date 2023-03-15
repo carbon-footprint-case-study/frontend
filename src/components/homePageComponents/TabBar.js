@@ -11,7 +11,10 @@ import PanToolIcon from '@mui/icons-material/PanTool';
 import Home from './Home';
 import Travel from './Travel';
 
+
+
 function Tabbar() {
+
   return (
     <>
     <Tabs
@@ -24,7 +27,7 @@ function Tabbar() {
         <Home />
       </Tab>
       <Tab eventKey="travel"  title = {<span><SubwayIcon/> Travel</span>}>
-        <Travel/>
+        <Travel />
       </Tab>
       <Tab eventKey="food" title={<span><FastfoodIcon/> Food</span>}>
         <Calculator/>

@@ -47,7 +47,7 @@ class Home extends Component  {
     this.setState({
       e : nextE
     })
-    console.log(this.state.e)
+   
     
 
 
@@ -91,7 +91,7 @@ class Home extends Component  {
               />
             </Col>
           </Row>
-          <BarGraph data = {this.state.e}/>
+          <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/>
         </Container>
       );
 

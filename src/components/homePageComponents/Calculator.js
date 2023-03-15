@@ -3,6 +3,8 @@ import { useState } from "react";
 
 function Calculator(props) {
   let val;
+  const h = props.h
+
 
   
  
@@ -20,7 +22,9 @@ else if (props.title === "Electricity") {
 else if (props.title === "Water Usage") {
     if (props.unit === "Rs./month") val = props.value;
     else val = props.value;
-  } else if(props.title === "Private Vehicle") {
+  }
+  
+else if(props.title === "Private Vehicle") {
     if (props.unit === "litre/month") {
       switch (props.fuel) {
         case "Diesel":
@@ -51,11 +55,16 @@ else if (props.title === "Water Usage") {
           break;
       }
     }
+
   }
+
+
+  
+  
     
   return (
     <div>
-      Your Carbon emission is {val} kg/month from {props.title}
+
     </div>
   );
 }
