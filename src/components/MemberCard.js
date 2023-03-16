@@ -10,8 +10,11 @@ function MemberCard(props) {
   const name=props.name
   const mobileNo = props.mobileNo
   const email = props.email
+  const em = props.email.slice(7 , )
   const location = props.location
   const photo = props.photo
+  const fb = props.fb
+  const ln = props.ln
     return (
     // <Card className='my-4' style={{ width: '80%' }}>
     //   <Card.Img variant="top" src="https://picsum.photos/200/300" />
@@ -32,7 +35,7 @@ function MemberCard(props) {
           <img src= {photo} alt="" className="img-circle mx-auto mb-3" />
           <h3 className="mb-4">{name}</h3>
           <div className="text-left mb-4">
-            <h6 className="mb-2"><i className="fa fa-envelope mr-2" /><MailOutlineIcon/>{email}</h6>
+            <h6 className="mb-2"><i className="fa fa-envelope mr-2" /><MailOutlineIcon/>{em}</h6>
             <h6 className="mb-2"><i className="fa fa-phone mr-2"><CallOutlinedIcon/> {mobileNo}</i></h6>
             <h6 className="mb-2"><i className="fa fa-map-marker-alt mr-2" /><LocationOnOutlinedIcon/> {location}</h6>
           </div>
@@ -40,13 +43,13 @@ function MemberCard(props) {
             {/* <a href="#" className="mx-2">
               <img src="img/social/dribbble.svg" alt="Dribbble" />
             </a> */}
-            <a href="#" className="mx-2">
+            <a href={fb} className="mx-2">
               <FacebookIcon/>
             </a>
-            <a href="#" className="mx-2">
+            <a href={ln} className="mx-2">
               <LinkedInIcon/>
             </a>
-            <a href="#" className="mx-2">
+            <a href={email} className="mx-2">
             <EmailIcon/>
             </a>
           </div>
