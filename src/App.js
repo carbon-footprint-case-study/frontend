@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs";
 import ContactForm from "./components/contactForm/contactform";
 
 import BarGraph from './components/BarGraph'
+import Sustainable from "./components/information/Sustainable";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Routes>
 
           <Route path="/information/deforestaion" element={<Deforestation />} />
+          <Route path="/information/sustainable-development" element={<Sustainable/>} />
+
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<ContactForm/>} />
           <Route path="/" element={<HomePage />} />

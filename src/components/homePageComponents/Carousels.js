@@ -14,24 +14,24 @@ function Carousels() {
                     src={Food1}
                     alt="First slide"
                 />
-                {/* <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption> */}
+                <Carousel.Caption>
+                    <h3>Livestock production generates nearly a fifth of the world’s greenhouse gases — more than transportation.</h3>
+                    {/* <p>Livestock production generates nearly a fifth of the world’s greenhouse gases — more than transportation.</p> */}
+                </Carousel.Caption>
             </Carousel.Item>
 
             <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={Trans1}
-                    alt="Second slide"
+                    alt="Third slide"
                 />
-                {/* <Carousel.Caption>
+                <Carousel.Caption>
                     <h3>Second slide label</h3>
-                    <p>
+                    {/* <p>
                         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                </Carousel.Caption> */}
+                    </p> */}
+                </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -39,12 +39,12 @@ function Carousels() {
                     src={Co2}
                     alt="Third slide"
                 />
-                {/* <Carousel.Caption>
+                <Carousel.Caption>
                     <h3>Third slide label</h3>
-                    <p>
+                    {/* <p>
                         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                </Carousel.Caption> */}
+                    </p> */}
+                </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
         </Container>

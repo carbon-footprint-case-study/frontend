@@ -17,7 +17,7 @@ function NavBar() {
 
             <NavDropdown title="Information" id="basic-nav-dropdown">
               <NavDropdown.Item href="/information/deforestaion">Deforestation</NavDropdown.Item>
-              <NavDropdown.Item href="#">Climate Change</NavDropdown.Item>
+              <NavDropdown.Item href="/information/sustainable-development">Sustainable Development Goals</NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
               {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
