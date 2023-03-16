@@ -7,8 +7,8 @@ export const StyledButton = styled.button`
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  padding: 15px 365px;
-  background-color: ${({ bg }) => bg || '#ff9900'};
+  padding: 15px 215px;
+  background-color: ${({ bg }) => bg || 'rgb(59, 138, 3);'};
   color: ${({ color }) => color || '#fff'};
 
   &:hover {
