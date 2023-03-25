@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+
 import Button from 'react-bootstrap/Button';
 
 import Calculator from './Calculator'
+
 import SubwayIcon from '@mui/icons-material/Subway';
 import HomeIcon from '@mui/icons-material/Home';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
@@ -37,7 +39,6 @@ function Tabbar() {
 
   return (
     <>
-
       <Tabs
         activeKey={activeKey}
         onSelect={(k) => setActiveKey(k)}
