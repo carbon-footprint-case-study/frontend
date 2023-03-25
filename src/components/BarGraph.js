@@ -9,12 +9,13 @@ export default class BarGraph extends React.Component {
   constructor(props) {
     super(props)
     this.data = props.data
+    this.lables = props.lables
     console.log(this.data)
     this.s = {
-      labels: ['January', 'February' , 'March'],
+      labels: this.lables,
       datasets: [
         {
-          label: 'Rainfall',
+          label: 'Carbon Emission',
           backgroundColor: 'rgba(75,192,192,1)',
           borderColor: 'rgba(0,0,0,1)',
           borderWidth: 2,

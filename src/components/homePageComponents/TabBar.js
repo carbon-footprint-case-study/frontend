@@ -1,7 +1,5 @@
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
-import Calculator from './Calculator'
 import SubwayIcon from '@mui/icons-material/Subway';
 import HomeIcon from '@mui/icons-material/Home';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
@@ -11,7 +9,10 @@ import PanToolIcon from '@mui/icons-material/PanTool';
 import Home from './Home';
 import Travel from './Travel';
 
+
+
 function Tabbar() {
+
   return (
     <>
     <Tabs
@@ -20,23 +21,19 @@ function Tabbar() {
       className="mb-3"
       fill
     >
-      <Tab eventKey="home" title = {<span><HomeIcon/>Home</span>} >
+      <Tab eventKey="home" title = {<span><HomeIcon/>Home</span>}>
         <Home />
       </Tab>
       <Tab eventKey="travel"  title = {<span><SubwayIcon/> Travel</span>}>
-        <Travel/>
+        <Travel />
       </Tab>
       <Tab eventKey="food" title={<span><FastfoodIcon/> Food</span>}>
-        <Calculator/>
       </Tab>
       <Tab eventKey="shopping" title = {<span><ShoppingCartIcon/> Shopping</span>}>
-        <Calculator/>
       </Tab>
       <Tab eventKey="footprint" title= {<span><Co2Icon/> Footprint</span>}>
-        <Calculator/>
       </Tab>
       <Tab eventKey="action" title={<span><PanToolIcon/> Action</span>}>
-        <Calculator />
       </Tab>
     </Tabs>
 

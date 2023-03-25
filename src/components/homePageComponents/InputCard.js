@@ -1,37 +1,60 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
 import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import Calculator from "./Calculator";
 import { useState } from "react";
+import InputComponent from "./InputComponent";
+// import InputComp from "./InputComp";
 
 function InputCard(props) {
-  const [value, setValue] = useState(0);
-
   const icon = props.icon;
   const title = props.title;
-  const units = props.units;
   const handler = props.handler;
-  const data = props.data
- 
+  const [sum, setSum] = useState(0);
 
+  const sumHandler = (val) => {
+    setSum(sum + val);
+    handler(title , sum)
+    console.log("Sum Handler")
+  }
 
+  let [inputList, setInputList] = useState([1]);
 
-
-  const [unit, setUnit] = useState(units[0]);
-
-  const getData = (ele) => {
-    let v = ele.target.value
-    if(isNaN(v) | v < 0){
-      return false
-    }
-    handler(title , v)
-    setValue(v);
-    return true
-    
-    
+  const addInputComponent = () => {
+    let newInputList = [...inputList];
+    let count = newInputList.length;
+    newInputList.push(count + 1);
+    setInputList(newInputList);
   };
+
+  const removeInputComponent = () => {
+    let newInputList = [...inputList];
+    newInputList.pop();
+    setInputList(newInputList);
+  };
+
+  let addBtn;
+  let removeBtn;
+  if (title === "Private Vehicle") {
+    addBtn = (
+      <button
+        className="btn btn-primary"
+        onClick={(e) => {
+          addInputComponent();
+        }}
+      >
+        <p>+ Add</p>
+      </button>
+    );
+    removeBtn = (
+      <button
+        className="btn btn-danger"
+        onClick={(e) => {
+          removeInputComponent();
+        }}
+      >
+        <p>X</p>
+      </button>
+    );
+  }
 
   return (
     <div className="my-4 mx-4 justify-content-center">
@@ -40,29 +63,20 @@ function InputCard(props) {
           <h4>
             {icon} {title}
           </h4>
+          <p>
+            {addBtn} {removeBtn}
+          </p>
         </Card.Header>
-        <ListGroup variant="flush">
-          <ListGroup.Item>
-            <InputGroup className="mb-3 my-3">
-              <Form.Control
-                aria-label="Text input with dropdown button"
-                type="number"
-                onChange={getData}
-                value = {value}
-              />
-              <select
-                className="dropdown"
-                onChange={(e) => setUnit(e.target.value)}
-              >
-                {units.map((currElement) => {
-                  return <option key={currElement}>{currElement}</option>;
-                })}
-              </select>
-            </InputGroup>
-            <Calculator title={title} unit={unit} data = {data} handler = {handler}  
-            />
-          </ListGroup.Item>
-        </ListGroup>
+        {inputList.map((curr) => {
+          return (
+            <>
+              {
+                <InputComponent key={curr} title={title} units={props.units}  sumHandler = {sumHandler}/>
+              }
+            </>
+          );
+        })}
+        
       </Card>
     </div>
   );

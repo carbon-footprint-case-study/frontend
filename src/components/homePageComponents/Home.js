@@ -1,14 +1,10 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import TungstenRoundedIcon from "@mui/icons-material/TungstenRounded";
 import PropaneTankTwoToneIcon from "@mui/icons-material/PropaneTankTwoTone";
 import WaterIcon from "@mui/icons-material/Water";
 import { Col, Container, Row } from "react-bootstrap";
 import InputCard from "./InputCard";
 import BarGraph from "../BarGraph";
-
-
-
-
 
 class Home extends Component  {
 
@@ -25,13 +21,6 @@ class Home extends Component  {
       this.waterUnit = [this.rm, "litre/month"];
     }
 
-
-
-  
-   
-
-
-
    handler = (n, d) => {
     let nextE = this.state.e;
    
@@ -47,9 +36,6 @@ class Home extends Component  {
     this.setState({
       e : nextE
     })
-    console.log(this.state.e)
-    
-
 
   }
 
@@ -91,7 +77,7 @@ class Home extends Component  {
               />
             </Col>
           </Row>
-          <BarGraph data = {this.state.e}/>
+          <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/>
         </Container>
       );
 

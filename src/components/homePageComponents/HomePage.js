@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import TabBar from "./TabBar";
 import Carousels from "./Carousels";
 import { Container } from "react-bootstrap";
 
-
 function HomePage() {
-  const [data , setData] = useState([0 , 0 , 0 , 0])
+  // const [data , setData] = useState([0 , 0 , 0 , 0])
 
   return (
     <div>
