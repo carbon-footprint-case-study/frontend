@@ -9,9 +9,11 @@ import ContactForm from "./components/contactForm/contactform";
 import BarGraph from './components/BarGraph'
 import Sustainable from "./components/information/Sustainable";
 
+
 function App() {
   return (
     <div className="App">
+      
       
       <Router>
       <NavBar />
