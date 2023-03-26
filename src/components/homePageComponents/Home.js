@@ -19,25 +19,26 @@ class Home extends Component  {
       this.elecUnit = [this.rm, "KWhr/month"];
       this.lpgUnit = ["cylinder/month", "litre/month"];
       this.waterUnit = [this.rm, "litre/month"];
+      this.handler = props.handler
     }
 
-   handler = (n, d) => {
-    let nextE = this.state.e;
+  //  handler = (n, d) => {
+  //   let nextE = this.state.e;
    
-    if (n === "Electricity") {
-      nextE[0] = d;
-    }
-    else if (n === "LPG") {
-      nextE[1] = d;
-    }
-    else {
-      nextE[2] = d;
-    }
-    this.setState({
-      e : nextE
-    })
+  //   if (n === "Electricity") {
+  //     nextE[0] = d;
+  //   }
+  //   else if (n === "LPG") {
+  //     nextE[1] = d;
+  //   }
+  //   else {
+  //     nextE[2] = d;
+  //   }
+  //   this.setState({
+  //     e : nextE
+  //   })
 
-  }
+  // }
 
     render() {
       return (
@@ -50,7 +51,7 @@ class Home extends Component  {
                 units={this.elecUnit}
                 value={100}
                 handler={this.handler}
-                data = {this.state.e}
+              
   
               />
             </Col>
@@ -60,7 +61,7 @@ class Home extends Component  {
                 title="LPG"
                 units={this.lpgUnit}
                 handler={this.handler}
-                data  = {this.state.e}
+              
   
               />
             </Col>
@@ -72,12 +73,12 @@ class Home extends Component  {
                 units={this.waterUnit}
                 value={100}
                 handler={this.handler}
-                data = {this.state.e}
+               
   
               />
             </Col>
           </Row>
-          <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/>
+          {/* <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/> */}
         </Container>
       );
 

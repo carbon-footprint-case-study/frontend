@@ -12,26 +12,27 @@ class  Travel extends Component {
         e : [0 , 0 ]
       }
       this.unit = ["litre/month", "km/month"]
+      this.handler = props.handler
     }
 
-    handler = (n, d) => {
-      let nextE = this.state.e;
+    // handler = (n, d) => {
+    //   let nextE = this.state.e;
      
-      if (n === "Private Vehicle") {
-        nextE[0] = d;
-      }
-      else {
-        nextE[1] = d;
-      }
+    //   if (n === "Private Vehicle") {
+    //     nextE[0] = d;
+    //   }
+    //   else {
+    //     nextE[1] = d;
+    //   }
 
-      this.setState({
-        e : nextE
-      })
+    //   this.setState({
+    //     e : nextE
+    //   })
      
       
   
   
-    }
+    // }
 
 
 
@@ -57,7 +58,7 @@ class  Travel extends Component {
               />
             </Col>
           </Row>
-          <BarGraph data = {this.state.e} lables = {["Private Vehicle" , "Public Transport"]}/>
+          
         </Container>
       );
 
