@@ -1,9 +1,8 @@
-import React , {useState , Component} from "react";
+import React , {Component} from "react";
 import TungstenRoundedIcon from "@mui/icons-material/TungstenRounded";
 import PropaneTankTwoToneIcon from "@mui/icons-material/PropaneTankTwoTone";
 import { Col, Container, Row } from "react-bootstrap";
 import InputCard from "./InputCard";
-import BarGraph from "../BarGraph";
 
 class  Travel extends Component {
     constructor(props){
@@ -12,7 +11,9 @@ class  Travel extends Component {
         e : [0 , 0 ]
       }
       this.unit = ["litre/month", "km/month"]
+
       this.handler = props.handler
+
     }
 
     // handler = (n, d) => {
@@ -24,6 +25,7 @@ class  Travel extends Component {
     //   else {
     //     nextE[1] = d;
     //   }
+
 
     //   this.setState({
     //     e : nextE
@@ -58,7 +60,9 @@ class  Travel extends Component {
               />
             </Col>
           </Row>
+
           
+
         </Container>
       );
 

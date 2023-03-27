@@ -1,11 +1,15 @@
 
 
+
 import React, { useState, useEffect } from 'react'
+
 import BarGraph from './BarGraph'
 
 function FootPrint(props) {
+
   const homeData =  props.homeData
   const travelData =  props.travelData
+
   const homeLabels = props.homeLabels
   const travelLabels = props.travelLabels
   const totalData = props.totalData
