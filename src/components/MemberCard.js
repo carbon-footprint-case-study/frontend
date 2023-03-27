@@ -1,4 +1,3 @@
-import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -13,7 +12,6 @@ function MemberCard(props) {
   const em = props.email.slice(7 , )
   const location = props.location
   const photo = props.photo
-  const fb = props.fb
   const ln = props.ln
     return (
     // <Card className='my-4' style={{ width: '80%' }}>
@@ -43,13 +41,11 @@ function MemberCard(props) {
             {/* <a href="#" className="mx-2">
               <img src="img/social/dribbble.svg" alt="Dribbble" />
             </a> */}
-            <a href={fb} className="mx-2">
-              <FacebookIcon/>
-            </a>
-            <a href={ln} className="mx-2">
+            
+            <a href={ln} className="mx-3">
               <LinkedInIcon/>
             </a>
-            <a href={email} className="mx-2">
+            <a href={email} className="mx-3">
             <EmailIcon/>
             </a>
           </div>
