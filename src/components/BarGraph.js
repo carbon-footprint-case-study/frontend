@@ -33,6 +33,15 @@ export default class BarGraph extends React.Component {
         <Bar
           data= {this.s}
           options={{
+            scales: {
+              y: {
+                  beginAtZero: true,
+                  title: {
+                      display: true,
+                      text: 'CO2 emission in Kg'
+                  }
+              }
+          },
             title:{
               display:true,
               text:'Average Rainfall per month',
