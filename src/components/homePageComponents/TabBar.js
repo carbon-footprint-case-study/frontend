@@ -46,7 +46,9 @@ class Tabbar extends Component {
       nextE[2] = d;
     }
     let sum2 =  nextE.reduce((a , b) => a + b)
+
     let t = this.state.total
+
     t[0] += sum2 - sum1
     this.setState({
       home : nextE,
