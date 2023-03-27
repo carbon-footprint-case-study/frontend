@@ -21,6 +21,12 @@ function FootPrint(props) {
   const [labels, setLabels] = useState(homeLabels)
 
 
+  const [unit, setUnit] = useState(units[0])
+  const [data, setData] = useState(homeData)
+  const [labels, setLabels] = useState(homeLabels)
+
+
+
 
   const unitHandler = (ele) => {
     let curr = ele.target.value
