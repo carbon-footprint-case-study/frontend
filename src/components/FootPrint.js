@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BarGraph from './BarGraph'
 import { useState , useEffect} from 'react'
 
 function FootPrint(props) {
+
 
   const homeData = props.homeData
   const travelData = props.travelData

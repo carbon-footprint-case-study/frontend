@@ -1,3 +1,4 @@
+
 // import React, { useState } from 'react';
 // import Tab from 'react-bootstrap/Tab';
 // import Tabs from 'react-bootstrap/Tabs';
@@ -142,20 +143,24 @@ class Tabbar extends Component {
   handlePrev = () => {
     const tabs = ['home', 'travel', 'food', 'shopping', 'footprint', 'action'];
     const currentTabIndex = tabs.indexOf(this.state.activeKey);
+
     const prevTabIndex = currentTabIndex - 1;
     if (prevTabIndex >= 0) {
       this.setState({ activeKey: tabs[prevTabIndex] });
     }
   };
 
+
   handleNext = () => {
     const tabs = ['home', 'travel', 'food', 'shopping', 'footprint', 'action'];
     const currentTabIndex = tabs.indexOf(this.state.activeKey);
+
     const nextTabIndex = currentTabIndex + 1;
     if (nextTabIndex < tabs.length) {
       this.setState({ activeKey: tabs[nextTabIndex] });
     }
   };
+
 
   render() {
     return (
@@ -194,6 +199,7 @@ class Tabbar extends Component {
       </>
     );
   }
+
 }
 
 export default Tabbar;

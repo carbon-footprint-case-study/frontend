@@ -4,7 +4,6 @@ import PropaneTankTwoToneIcon from "@mui/icons-material/PropaneTankTwoTone";
 import WaterIcon from "@mui/icons-material/Water";
 import { Col, Container, Row } from "react-bootstrap";
 import InputCard from "./InputCard";
-import BarGraph from "../BarGraph";
 
 class Home extends Component  {
 
@@ -19,12 +18,15 @@ class Home extends Component  {
       this.elecUnit = [this.rm, "KWhr/month"];
       this.lpgUnit = ["cylinder/month", "litre/month"];
       this.waterUnit = [this.rm, "litre/month"];
+
       this.handler = props.handler
+
     }
 
   //  handler = (n, d) => {
   //   let nextE = this.state.e;
    
+
   //   if (n === "Electricity") {
   //     nextE[0] = d;
   //   }
@@ -40,6 +42,8 @@ class Home extends Component  {
 
   // }
 
+
+
     render() {
       return (
         <Container>
@@ -50,9 +54,11 @@ class Home extends Component  {
                 title="Electricity"
                 units={this.elecUnit}
                 value={100}
+
                 handler={this.handler}
               
   
+
               />
             </Col>
             <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
@@ -63,6 +69,7 @@ class Home extends Component  {
                 handler={this.handler}
               
   
+
               />
             </Col>
   
@@ -72,6 +79,7 @@ class Home extends Component  {
                 title="Water Usage"
                 units={this.waterUnit}
                 value={100}
+
                 handler={this.handler}
                
   
@@ -79,6 +87,7 @@ class Home extends Component  {
             </Col>
           </Row>
           {/* <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/> */}
+
         </Container>
       );
 
