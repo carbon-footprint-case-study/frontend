@@ -9,10 +9,10 @@ export default class BarGraph extends React.Component {
   constructor(props) {
     super(props)
     this.data = props.data
-    this.lables = props.lables
-    console.log(this.data)
+    this.labels = props.labels
+    console.log(`bar graph data ${this.data}`)
     this.s = {
-      labels: this.lables,
+      labels: this.labels,
       datasets: [
         {
           label: 'Carbon Emission',

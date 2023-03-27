@@ -4,7 +4,6 @@ import PropaneTankTwoToneIcon from "@mui/icons-material/PropaneTankTwoTone";
 import WaterIcon from "@mui/icons-material/Water";
 import { Col, Container, Row } from "react-bootstrap";
 import InputCard from "./InputCard";
-import BarGraph from "../BarGraph";
 
 class Home extends Component  {
 
@@ -19,6 +18,8 @@ class Home extends Component  {
       this.elecUnit = [this.rm, "KWhr/month"];
       this.lpgUnit = ["cylinder/month", "litre/month"];
       this.waterUnit = [this.rm, "litre/month"];
+      this.homeHandler = props.homeHandler
+
     }
 
    handler = (n, d) => {
@@ -36,8 +37,10 @@ class Home extends Component  {
     this.setState({
       e : nextE
     })
-
+    console.log("home Handler before calling")
+    this.homeHandler(this.state.e)
   }
+
 
     render() {
       return (
@@ -49,9 +52,7 @@ class Home extends Component  {
                 title="Electricity"
                 units={this.elecUnit}
                 value={100}
-                handler={this.handler}
-                data = {this.state.e}
-  
+                handler={this.handler}  
               />
             </Col>
             <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
@@ -59,9 +60,7 @@ class Home extends Component  {
                 icon={<PropaneTankTwoToneIcon />}
                 title="LPG"
                 units={this.lpgUnit}
-                handler={this.handler}
-                data  = {this.state.e}
-  
+                handler={this.handler}  
               />
             </Col>
   
@@ -71,13 +70,10 @@ class Home extends Component  {
                 title="Water Usage"
                 units={this.waterUnit}
                 value={100}
-                handler={this.handler}
-                data = {this.state.e}
-  
+                handler={this.handler}  
               />
             </Col>
           </Row>
-          <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/>
         </Container>
       );
 

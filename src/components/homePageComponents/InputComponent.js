@@ -23,18 +23,18 @@ function InputComponent(props) {
           let res = 0
           let prevRes = result
           if (title === "LPG") {
-            if (unit === "cylinder/month") res = v * 45.8422;
-            else res = v * 1.649;
+            if (unit === "cylinder/month") res = v * 34.7733;
+            else res = v * 1.2494;
         
         } 
         else if (title === "Electricity") {
             if (unit === "Rs./month") res = v;
-            else res = 0.475*v
+            else res = 0.93*v
         
         } 
         else if (title === "Water Usage") {
             if (unit === "Rs./month") res = v;
-            else res = 0.00001*v;
+            else res = 0.000422*v;
           }
           
         else if(title === "Private Vehicle" | title === "Public Transport") {
@@ -74,7 +74,7 @@ function InputComponent(props) {
         };
         Calculator(title, unit, fuel, milageValue, value, setResult);
 
-    },[title, unit, fuel, milageValue, value, result, sumHandler])
+    },[title, unit, fuel, milageValue, value, result])
   
   const getMilageData = (ele) => {
     setMilageValue(ele.target.value);
