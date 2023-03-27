@@ -10,7 +10,7 @@ export default class BarGraph extends React.Component {
     super(props)
     this.data = props.data
     this.labels = props.labels
-    console.log(`bar graph data ${this.data}`)
+
     this.s = {
       labels: this.labels,
       datasets: [
@@ -34,6 +34,15 @@ export default class BarGraph extends React.Component {
         <Bar
           data= {this.s}
           options={{
+            scales: {
+              y: {
+                  beginAtZero: true,
+                  title: {
+                      display: true,
+                      text: 'CO2 emission in Kg'
+                  }
+              }
+          },
             title:{
               display:true,
               text:'Average Rainfall per month',

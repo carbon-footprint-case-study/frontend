@@ -18,28 +18,30 @@ class Home extends Component  {
       this.elecUnit = [this.rm, "KWhr/month"];
       this.lpgUnit = ["cylinder/month", "litre/month"];
       this.waterUnit = [this.rm, "litre/month"];
-      this.homeHandler = props.homeHandler
+
+      this.handler = props.handler
 
     }
 
-   handler = (n, d) => {
-    let nextE = this.state.e;
+  //  handler = (n, d) => {
+  //   let nextE = this.state.e;
    
-    if (n === "Electricity") {
-      nextE[0] = d;
-    }
-    else if (n === "LPG") {
-      nextE[1] = d;
-    }
-    else {
-      nextE[2] = d;
-    }
-    this.setState({
-      e : nextE
-    })
-    console.log("home Handler before calling")
-    this.homeHandler(this.state.e)
-  }
+
+  //   if (n === "Electricity") {
+  //     nextE[0] = d;
+  //   }
+  //   else if (n === "LPG") {
+  //     nextE[1] = d;
+  //   }
+  //   else {
+  //     nextE[2] = d;
+  //   }
+  //   this.setState({
+  //     e : nextE
+  //   })
+
+  // }
+
 
 
     render() {
@@ -52,7 +54,11 @@ class Home extends Component  {
                 title="Electricity"
                 units={this.elecUnit}
                 value={100}
-                handler={this.handler}  
+
+                handler={this.handler}
+              
+  
+
               />
             </Col>
             <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
@@ -60,7 +66,10 @@ class Home extends Component  {
                 icon={<PropaneTankTwoToneIcon />}
                 title="LPG"
                 units={this.lpgUnit}
-                handler={this.handler}  
+                handler={this.handler}
+              
+  
+
               />
             </Col>
   
@@ -70,10 +79,15 @@ class Home extends Component  {
                 title="Water Usage"
                 units={this.waterUnit}
                 value={100}
-                handler={this.handler}  
+
+                handler={this.handler}
+               
+  
               />
             </Col>
           </Row>
+          {/* <BarGraph data = {this.state.e}  lables = {["Electricity" , "LPG" , "Water Usage"]}/> */}
+
         </Container>
       );
 

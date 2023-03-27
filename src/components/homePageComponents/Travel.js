@@ -11,29 +11,30 @@ class  Travel extends Component {
         e : [0 , 0 ]
       }
       this.unit = ["litre/month", "km/month"]
-      this.travelHandler = props.travelHandler
+
+      this.handler = props.handler
+
     }
 
-    handler = (n, d) => {
-      let nextE = this.state.e;
+    // handler = (n, d) => {
+    //   let nextE = this.state.e;
      
-      if (n === "Private Vehicle") {
-        nextE[0] = d;
-      }
-      else {
-        nextE[1] = d;
-      }
+    //   if (n === "Private Vehicle") {
+    //     nextE[0] = d;
+    //   }
+    //   else {
+    //     nextE[1] = d;
+    //   }
 
-      this.setState({
-        e : nextE
-      })
 
-      this.travelHandler(this.state.e)
+    //   this.setState({
+    //     e : nextE
+    //   })
      
       
   
   
-    }
+    // }
 
 
 
@@ -59,6 +60,9 @@ class  Travel extends Component {
               />
             </Col>
           </Row>
+
+          
+
         </Container>
       );
 
