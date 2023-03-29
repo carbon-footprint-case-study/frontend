@@ -24,6 +24,8 @@
     "react-scripts": "^5.0.1",
     "recharts": "^2.4.3",
     "styled-components": "^5.3.6",
+    "victory": "^36.6.8",
+    "victory-core": "^36.6.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

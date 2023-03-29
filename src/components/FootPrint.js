@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react'
 
 import BarGraph from './BarGraph'
+import StackedBarGraph from './StackedBar'
 
 function FootPrint(props) {
 
@@ -16,9 +17,7 @@ function FootPrint(props) {
   const units = ['Home', 'Travel', 'Total']
 
 
-  const [unit, setUnit] = useState(units[0])
-  const [data, setData] = useState(homeData)
-  const [labels, setLabels] = useState(homeLabels)
+
 
 
   const [unit, setUnit] = useState(units[0])
@@ -54,7 +53,11 @@ function FootPrint(props) {
           )
         })}
       </select>
-      <BarGraph data={data} labels={labels} key={String(data)} />
+      {unit === 'Total' ? (
+        <StackedBarGraph homeData = {homeData} travelData = {travelData} />
+      ) : (
+        <BarGraph data={data} labels={labels} key={String(data)} />
+      )}
     </>
   )
 }
