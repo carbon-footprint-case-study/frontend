@@ -3,7 +3,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
-import '../CSS/style.scss'
+import './style.scss'
 
 function MemberCard(props) {
   const name=props.name
