@@ -22,7 +22,6 @@ function App() {
 
           <Route path="/information/deforestaion" element={<Deforestation />} />
           <Route path="/information/sustainable-development" element={<Sustainable/>} />
-          <Route path="/information/climate" element={<Climate/>} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<ContactForm/>} />
           <Route path="/calculator" element={<HomePage />} />
