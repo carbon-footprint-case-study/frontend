@@ -49,7 +49,7 @@ function Goals() {
           </div>
         </Col>
       </Row>
-      <Row className="my-4">
+      {/* <Row className="my-4">
         <Col className="card" md={{ span: 2, offset: 1 }}>
           <div className="imgBox">
             <img className="sustainable" src={sustainable_3} />
@@ -87,7 +87,7 @@ function Goals() {
           </div>
         </Col>
 
-      </Row>
+      </Row> */}
     </Container>
   );
 }
