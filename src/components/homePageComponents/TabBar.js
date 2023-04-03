@@ -16,9 +16,9 @@ import Co2Icon from '@mui/icons-material/Co2';
 import PanToolIcon from '@mui/icons-material/PanTool';
 import Home from './Home';
 import Travel from './Travel';
-import FootPrint from '../FootPrint';
-import BarGraph from "../BarGraph";
-import Shopping from '../Shopping';
+import FootPrint from './FootPrint';
+import BarGraph from "./BarGraph";
+import Shopping from './Shopping';
 import { StackedBarChart } from '@mui/icons-material';
 
 
