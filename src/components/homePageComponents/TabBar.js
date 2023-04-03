@@ -18,7 +18,7 @@ import Home from './Home';
 import Travel from './Travel';
 import FootPrint from '../FootPrint';
 import BarGraph from "../BarGraph";
-import Shopping from '../Shopping';
+
 import { StackedBarChart } from '@mui/icons-material';
 
 
@@ -121,10 +121,7 @@ class Tabbar extends Component {
           <Tab eventKey="food" title={<span><FastfoodIcon /> Food</span>}>
             
           </Tab>
-          <Tab eventKey="shopping" title={<span><ShoppingCartIcon /> Shopping</span>}>
-            <Shopping homeData = {this.state.home} travelData = {this.state.travel}/>
-           
-          </Tab>
+
           <Tab eventKey="footprint" title={<span><Co2Icon /> Footprint</span>}>
             <FootPrint homeData = {this.state.home} travelData = {this.state.travel} totalData = {this.state.total} homeLabels={["Electricity", "LPG", "Water Usage"]} travelLabels = {["Private", "Public"]}/>
           </Tab>
@@ -144,3 +141,7 @@ class Tabbar extends Component {
 }
 
 export default Tabbar;
+
+
+
+

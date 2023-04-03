@@ -8,6 +8,7 @@ import ContactForm from "./components/contactForm/contactform";
 
 import BarGraph from './components/BarGraph'
 import Sustainable from "./components/information/Sustainable";
+import FrontPage from "./components/frontPage/FrontPage";
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
 
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<ContactForm/>} />
-          <Route path="/" element={<HomePage />} />
+          <Route path="/calculator" element={<HomePage />} />
+          <Route path="/" element={<FrontPage />} />
           
         </Routes>
       </Router>

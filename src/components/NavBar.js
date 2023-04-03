@@ -5,13 +5,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
   return (
-    <Navbar bg="dark" variant='dark'>
+    <Navbar bg="dark" variant='dark' sticky = 'top'>
       <Container>
         <Navbar.Brand href="/">Carbon Footprint</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/calculator">Calculator</Nav.Link>
             <Nav.Link href="/aboutus">About Us</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
 
