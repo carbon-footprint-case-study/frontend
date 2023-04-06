@@ -11,7 +11,8 @@ function InputComponent(props) {
     
     const title = props.title;
     const units = props.units;
-    const fuels = ["Petrol","Diesel","CNG"]
+    const fuels = ["Petrol","Diesel","CNG", "Electric"]
+    const trainType = ["Metro", "Non-Metro"]
     const [unit, setUnit] = useState(units[0]);
     const [fuel, setFuel] = useState(fuels[0]);
 
@@ -37,7 +38,7 @@ function InputComponent(props) {
             else res = 0.000422*v;
           }
           
-        else if(title === "Private Vehicle" | title === "Public Transport") {
+        else if(title === "Private Vehicle") {
             if (unit === "litre/month") {
               switch (fuel) {
                 case "Diesel":
@@ -69,6 +70,23 @@ function InputComponent(props) {
               }
             }
           }
+          else if(title === "Bus") {
+            switch (fuel) {
+              case "Diesel":
+                res = 2.2458*v
+                break;
+              case "Petrol":
+                res = 1.9313*v
+                break;
+              case "CNG":
+                res = 0.0019*v/40
+              case "Electric":
+                res = 0.015*v
+                break;
+              default:
+                break;
+            }
+          }
           setResult(res);
           sumHandler(res - prevRes);
         };
@@ -98,8 +116,8 @@ function InputComponent(props) {
 
   let fuelDrop
   let milage
-  if(title === "Private Vehicle" | title === "Public Transport") {
-    if(unit === "km/month")
+  if(title === "Private Vehicle" || title === "Bus") {
+    if(unit === "km/month" && title === "Private Vehicle")
     milage = <Form.Control
     aria-label="Text input with dropdown button"
     type="number"
@@ -111,6 +129,19 @@ function InputComponent(props) {
     onChange={fuelDropDownhandler}
   >
     {fuels.map((currElement) => {
+      return <>{title === "Private Vehicle" && currElement === "Electric" || <option key={currElement}>{currElement}</option>}</>;
+    })}
+  </select>
+  }
+
+
+  let train
+  if(title === "Train"){
+    train = <select
+    className="dropdown"
+    onChange={fuelDropDownhandler}
+  >
+    {trainType.map((currElement) => {
       return <option key={currElement}>{currElement}</option>;
     })}
   </select>
@@ -124,6 +155,7 @@ function InputComponent(props) {
           <ListGroup.Item>
             <InputGroup className="mb-3 my-3">
               {fuelDrop}
+              {train}
               {milage}
               <Form.Control
                 aria-label="Text input with dropdown button"
