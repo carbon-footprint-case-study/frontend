@@ -115,7 +115,7 @@ function InputComponent(props) {
 
 
   useEffect(() => {
-    if(unit === "km/month" && title === "Private vehicle"){
+    if(unit === "km/month" && title === "Private Vehicle"){
       setMileage(<Form.Control
         aria-label="Text input with dropdown button"
         type="number"
@@ -124,7 +124,7 @@ function InputComponent(props) {
       />)
     }
     else{
-      setMileage()
+      setMileage(<></>)
     }
   }, [unit, fuel]);
 

@@ -20,6 +20,7 @@ import FootPrint from './FootPrint';
 
 
 import { StackedBarChart } from '@mui/icons-material';
+import Food from './Food';
 
 
 class Tabbar extends Component {
@@ -29,6 +30,7 @@ class Tabbar extends Component {
       activeKey: 'home',
       home : [0 , 0 , 0],
       travel : [0 , 0],
+      food : [0, 0],
       total : [0 , 0]
     };
   }
@@ -60,6 +62,27 @@ class Tabbar extends Component {
   }
   travelHandler = (n, d) => {
     let nextE = this.state.travel;
+    let sum1 = nextE.reduce((a , b) => a + b)
+
+     
+    if (n === "Private Vehicle") {
+      nextE[0] = d;
+    }
+    else {
+      nextE[1] = d;
+    }
+    let sum2 = nextE.reduce((a , b) => a + b)
+    let t = this.state.total
+    t[1] += sum2 - sum1
+   
+    this.setState({
+      travel : nextE,
+      total : t
+    })
+
+  }
+  foodHandler = (n, d) => {
+    let nextE = this.state.food;
     let sum1 = nextE.reduce((a , b) => a + b)
 
      
@@ -119,7 +142,7 @@ class Tabbar extends Component {
             <Travel handler = {this.travelHandler}/>
           </Tab>
           <Tab eventKey="food" title={<span><FastfoodIcon /> Food</span>}>
-            
+            <Food  handler = {this.foodHandler}/>
           </Tab>
 
           <Tab eventKey="footprint" title={<span><Co2Icon /> Footprint</span>}>
