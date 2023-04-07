@@ -48,9 +48,17 @@ class Travel extends Component {
           </Col>
           <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
             <InputCard
+              icon={<TrainIcon />}
+              title="Metro"
+              units={["km/month"]}
+              handler={this.handler}
+            />
+          </Col>
+          <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
+            <InputCard
               icon={<FlightIcon />}
               title="Flight"
-              units={["hours/month"]}
+              units={["km/month"]}
               handler={this.handler}
             />
           </Col>
