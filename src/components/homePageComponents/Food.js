@@ -33,15 +33,15 @@ class Food extends Component {
           <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
             <InputCard
               icon={<DirectionsBusIcon />}
-              title="Bus"
-              units={["km/month"]}
+              title="Chapati"
+              units={["chapati/day"]}
               handler={this.handler}
             />
           </Col>
           <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
             <InputCard
               icon={<TrainIcon />}
-              title="Train"
+              title="Vegetables"
               units={["km/month"]}
               handler={this.handler}
             />

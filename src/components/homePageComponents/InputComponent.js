@@ -200,7 +200,7 @@ function InputComponent(props) {
 
 
 
-  let plHolder = `Enter ${title} usage in ${unit}`
+  let plHolder = title === "Chapati" | title === "Vegetables" ? `Enter ${title} consumption in ${unit}` : `Enter ${title} usage in ${unit}`
 
   return (
     <div>
