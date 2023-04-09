@@ -29,13 +29,16 @@ class Tabbar extends Component {
     this.state = {
       activeKey: 'home',
       home : [0 , 0 , 0],
-      travel : [0 , 0],
-      food : [0, 0],
-      total : [0 , 0]
+      travel : [0 , 0 , 0 , 0 , 0],
+      food : [0, 0 , 0 , 0 , 0 , 0 , 0 , 0],
+      total : [0 , 0 , 0]
     };
+     this.homeLabels = ["Electricity", "LPG", "Water Usage"]
+     this.travelLabels = ["Private", "Bus" , "Train" , "Metro" , "Flight"]
+     this.foodLabels = ["Chapati" , "Rice" , "Vegetables" , "Egg" , "Milk" , "Chicken" , "Mutton" , "Fish"]
   }
   
-
+  
   
   homeHandler = (n, d) => {
     let nextE = this.state.home;
@@ -68,9 +71,19 @@ class Tabbar extends Component {
     if (n === "Private Vehicle") {
       nextE[0] = d;
     }
-    else {
+    else if(n == "Bus"){
       nextE[1] = d;
     }
+    else if(n == "Train"){
+      nextE[2] = d;
+    }
+    else if(n == "Metro"){
+      nextE[3] = d;
+    }
+    else{
+      nextE[4] = d;
+    }
+
     let sum2 = nextE.reduce((a , b) => a + b)
     let t = this.state.total
     t[1] += sum2 - sum1
@@ -86,18 +99,36 @@ class Tabbar extends Component {
     let sum1 = nextE.reduce((a , b) => a + b)
 
      
-    if (n === "Private Vehicle") {
+    if (n === "Chapati") {
       nextE[0] = d;
     }
-    else {
+    else if(n == "Rice"){
       nextE[1] = d;
+    }
+    else if(n == "Vegetables"){
+      nextE[2] = d;
+    }
+    else if(n == "Egg"){
+      nextE[3] = d;
+    }
+    else if(n == "Milk"){
+      nextE[4] = d;
+    }
+    else if(n == "Chiken"){
+      nextE[5] = d;
+    }
+    else if(n == "Mutton"){
+      nextE[6] = d;
+    }
+    else{
+      nextE[7] = d;
     }
     let sum2 = nextE.reduce((a , b) => a + b)
     let t = this.state.total
-    t[1] += sum2 - sum1
+    t[2] += sum2 - sum1
    
     this.setState({
-      travel : nextE,
+      food : nextE,
       total : t
     })
 
@@ -124,7 +155,6 @@ class Tabbar extends Component {
     }
   };
 
-
   render() {
     return (
       <>
@@ -146,7 +176,7 @@ class Tabbar extends Component {
           </Tab>
 
           <Tab eventKey="footprint" title={<span><Co2Icon /> Footprint</span>}>
-            <FootPrint homeData = {this.state.home} travelData = {this.state.travel} totalData = {this.state.total} homeLabels={["Electricity", "LPG", "Water Usage"]} travelLabels = {["Private", "Public"]}/>
+            <FootPrint homeData = {this.state.home} travelData = {this.state.travel} foodData = {this.state.food} totalData = {this.state.total} homeLabels = {this.homeLabels} travelLabels = {this.travelLabels} foodLabels = {this.foodLabels}/>
           </Tab>
           <Tab eventKey="action" title={<span><PanToolIcon /> Action</span>}>
            

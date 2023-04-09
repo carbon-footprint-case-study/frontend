@@ -5,9 +5,11 @@ import { BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Bar , Label} fr
 const StackedBarGraph = (props) => {
   const homeData = props.homeData
   const travelData = props.travelData
+  const foodData = props.foodData
   const data = [
     { name: 'Home', Electricity: homeData[0], LPG: homeData[1], Water : homeData[2] },
-    { name: 'Travel', Private: travelData[0], Public: travelData[1] },
+    { name: 'Travel', Private: travelData[0], Bus: travelData[1] , Train: travelData[2] , Metro: travelData[3] , Flight: travelData[4]},
+    { name: 'Food', Chapati: foodData[0], Rice: foodData[1] , Vegetables: foodData[2] , Egg: foodData[3] , Milk: foodData[4] , Chicken : foodData[5] , Mutton : foodData[6] , Fish : foodData[7]},
   
   ];
   return (
@@ -23,7 +25,18 @@ const StackedBarGraph = (props) => {
       <Bar dataKey="LPG" stackId="a" fill="#82ca9d" />
       <Bar dataKey="Water" stackId="a" fill="#ffc658" />
       <Bar dataKey="Private" stackId="a" fill="#8884d8" />
-      <Bar dataKey="Public" stackId="a" fill="#82ca9d" />
+      <Bar dataKey="Bus" stackId="a" fill="#82ca9d" />
+      <Bar dataKey="Train" stackId="a" fill="#FF0000" />
+      <Bar dataKey="Metro" stackId="a" fill="#00FFFF" />
+      <Bar dataKey="Flight" stackId="a" fill="#0000FF" />
+      <Bar dataKey="Chapati" stackId="a" fill="#00008B" />
+      <Bar dataKey="Rice" stackId="a" fill="#ADD8E6" />
+      <Bar dataKey="Vegetables" stackId="a" fill="#800080" />
+      <Bar dataKey="Egg" stackId="a" fill="#FFFF00" />
+      <Bar dataKey="Milk" stackId="a" fill="#00FF00" />
+      <Bar dataKey="Chiken" stackId="a" fill="#FF00FF" />
+      <Bar dataKey="Mutton" stackId="a" fill="#FFC0CB" />
+      <Bar dataKey="Fish" stackId="a" fill="#C0C0C0" />
 
     </BarChart>
   );

@@ -13,7 +13,9 @@ export default class BarGraph extends React.Component {
     this.data = props.data
     this.labels = props.labels
 
-    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'];
+    console.log(this.data)
+
+    const colors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40' , '#7FFFD4' , '#808000' , '#008000' , '#800000'];
     // Define an array of colors, you can add or remove colors according to your preference.
 
     this.s = {

@@ -10,7 +10,7 @@ class Travel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      e: [0, 0],
+      e: [0, 0 , 0 , 0 , 0],
     };
     this.unit = ["litre/month", "km/month"];
 

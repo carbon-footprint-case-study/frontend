@@ -101,6 +101,30 @@ function InputComponent(props) {
       else if (title === "Flight") {
         res = 0.121 * v
       }
+      else if(title === "Chapati"){
+        res = 0.0162 * v * 30
+      }
+      else if(title === "Rice"){
+        res = 0.322 *v *30
+      }
+      else if(title === "Vegetables"){
+        res = 0.2 * v * 30
+      }
+      else if(title === "Egg" ){
+        res = 0.056 * v * 30
+      }
+      else if(title === "Milk"){
+        res = (0.35/4) * v * 30
+      }
+      else if(title == "Chicken"){
+        res = 6.9 * v * 4.2857
+      }
+      else if(title == "Mutton"){
+        res = 85.57 * v * 4.2857
+      }
+      else if(title == "Fish"){
+        res = 1.17 * v * 4.2857
+      }
 
 
 

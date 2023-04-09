@@ -2,10 +2,13 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import InputComponent from "./InputComponent";
-// import InputComp from "./InputComp";
+
+
+
+
 
 function InputCard(props) {
-  const icon = props.icon;
+  const icon = props.icon
   const title = props.title;
   const handler = props.handler;
   const [sum, setSum] = useState(0);
@@ -61,7 +64,7 @@ function InputCard(props) {
       <Card className="shadow-sm">
         <Card.Header>
           <h4>
-            {icon} {title}
+            {icon}{title}
           </h4>
           <p>
             {addBtn} {removeBtn}

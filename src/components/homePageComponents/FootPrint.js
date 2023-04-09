@@ -10,11 +10,13 @@ function FootPrint(props) {
 
   const homeData =  props.homeData
   const travelData =  props.travelData
+  const foodData = props.foodData
 
   const homeLabels = props.homeLabels
   const travelLabels = props.travelLabels
+  const foodLabels = props.foodLabels
   const totalData = props.totalData
-  const units = ['Home', 'Travel', 'Total']
+  const units = ['Home', 'Travel', 'Food','Total']
 
 
 
@@ -35,9 +37,13 @@ function FootPrint(props) {
     } else if (curr === 'Travel') {
       setData(travelData)
       setLabels(travelLabels)
-    } else {
+    } else if(curr == 'Food'){
+      setData(foodData)
+      setLabels(foodLabels)
+    }
+    else{
       setData(totalData)
-      setLabels(['Home', 'Travel'])
+      setLabels(['Home' , 'Travel' , 'Food'])
     }
     setUnit(curr)
   }
@@ -54,7 +60,7 @@ function FootPrint(props) {
         })}
       </select>
       {unit === 'Total' ? (
-        <StackedBarGraph homeData = {homeData} travelData = {travelData} />
+        <StackedBarGraph homeData = {homeData} travelData = {travelData} foodData = {foodData}/>
       ) : (
         <BarGraph data={data} labels={labels} key={String(data)} />
       )}
