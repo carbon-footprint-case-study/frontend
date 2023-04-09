@@ -1,25 +1,15 @@
-
-
-
-
 import React, { Component } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
 import Button from 'react-bootstrap/Button';
-
 import SubwayIcon from '@mui/icons-material/Subway';
 import HomeIcon from '@mui/icons-material/Home';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Co2Icon from '@mui/icons-material/Co2';
 import PanToolIcon from '@mui/icons-material/PanTool';
 import Home from './Home';
 import Travel from './Travel';
 import FootPrint from './FootPrint';
-
-
-import { StackedBarChart } from '@mui/icons-material';
 import Food from './Food';
 import Action from './Action';
 
@@ -72,13 +62,13 @@ class Tabbar extends Component {
     if (n === "Private Vehicle") {
       nextE[0] = d;
     }
-    else if(n == "Bus"){
+    else if(n === "Bus"){
       nextE[1] = d;
     }
-    else if(n == "Train"){
+    else if(n === "Train"){
       nextE[2] = d;
     }
-    else if(n == "Metro"){
+    else if(n === "Metro"){
       nextE[3] = d;
     }
     else{
@@ -103,22 +93,22 @@ class Tabbar extends Component {
     if (n === "Chapati") {
       nextE[0] = d;
     }
-    else if(n == "Rice"){
+    else if(n === "Rice"){
       nextE[1] = d;
     }
-    else if(n == "Vegetables"){
+    else if(n === "Vegetables"){
       nextE[2] = d;
     }
-    else if(n == "Egg"){
+    else if(n === "Egg"){
       nextE[3] = d;
     }
-    else if(n == "Milk"){
+    else if(n === "Milk"){
       nextE[4] = d;
     }
-    else if(n == "Chiken"){
+    else if(n === "Chiken"){
       nextE[5] = d;
     }
-    else if(n == "Mutton"){
+    else if(n === "Mutton"){
       nextE[6] = d;
     }
     else{
