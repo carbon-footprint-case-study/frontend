@@ -32,7 +32,6 @@ class Food extends Component {
           <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
             <InputCard
             icon={<img src={chapati} alt="hellow" style={{ width: "50px", height: "50px", marginRight: "10px" }} />}
-            icon={<img src={chapati} alt="hellow" style={{ width: "50px", height: "50px", marginRight: "10px" }} />}
             title="Chapati"
             units={["chapati/day"]}
             handler={this.handler}

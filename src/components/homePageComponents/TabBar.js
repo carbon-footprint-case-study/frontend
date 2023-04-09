@@ -21,6 +21,7 @@ import FootPrint from './FootPrint';
 
 import { StackedBarChart } from '@mui/icons-material';
 import Food from './Food';
+import Action from './Action';
 
 
 class Tabbar extends Component {
@@ -135,7 +136,7 @@ class Tabbar extends Component {
   }
 
   handlePrev = () => {
-    const tabs = ['home', 'travel', 'food', 'shopping', 'footprint', 'action'];
+    const tabs = ['home', 'travel', 'food', 'footprint', 'action'];
     const currentTabIndex = tabs.indexOf(this.state.activeKey);
 
     const prevTabIndex = currentTabIndex - 1;
@@ -146,7 +147,7 @@ class Tabbar extends Component {
 
 
   handleNext = () => {
-    const tabs = ['home', 'travel', 'food', 'shopping', 'footprint', 'action'];
+    const tabs = ['home', 'travel', 'food', 'footprint', 'action'];
     const currentTabIndex = tabs.indexOf(this.state.activeKey);
 
     const nextTabIndex = currentTabIndex + 1;
@@ -179,7 +180,7 @@ class Tabbar extends Component {
             <FootPrint homeData = {this.state.home} travelData = {this.state.travel} foodData = {this.state.food} totalData = {this.state.total} homeLabels = {this.homeLabels} travelLabels = {this.travelLabels} foodLabels = {this.foodLabels}/>
           </Tab>
           <Tab eventKey="action" title={<span><PanToolIcon /> Action</span>}>
-           
+           <Action totalData = {this.state.total} homeData = {this.state.home} travelData = {this.state.travel} foodData = {this.state.food}/>
           </Tab>
         </Tabs>
         <div className="d-flex justify-content-between mb-3">

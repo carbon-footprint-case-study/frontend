@@ -190,6 +190,7 @@ function InputComponent(props) {
   
 
   const getData = (ele) => {
+     ele.preventDefault()
     let v = ele.target.value
     if (isNaN(v) | v < 0) {
       return false

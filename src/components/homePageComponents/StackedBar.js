@@ -13,7 +13,7 @@ const StackedBarGraph = (props) => {
   
   ];
   return (
-    <BarChart width={500} height={300} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+    <BarChart style = {{width : "100%"}} height={500} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
       <XAxis dataKey="name" />
       <YAxis >
       <Label value="CO2 emmision in Kg" position="inside" angle={-90} offset={10} />

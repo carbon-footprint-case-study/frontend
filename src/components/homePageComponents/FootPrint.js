@@ -5,6 +5,9 @@ import React, { useState, useEffect } from 'react'
 
 import BarGraph from './BarGraph'
 import StackedBarGraph from './StackedBar'
+import { Col, Container, Row } from "react-bootstrap";
+
+
 
 function FootPrint(props) {
 
@@ -50,6 +53,12 @@ function FootPrint(props) {
 
   return (
     <>
+    
+
+
+      <Container>
+        <Row className="justify-content-md-center ">
+          <Col style={{ textAlign: 'center' }} md={{ span: 10 }}>
       <select className="dropdown" onChange={unitHandler}>
         {units.map((currElement) => {
           return (
@@ -60,10 +69,14 @@ function FootPrint(props) {
         })}
       </select>
       {unit === 'Total' ? (
-        <StackedBarGraph homeData = {homeData} travelData = {travelData} foodData = {foodData}/>
+        <StackedBarGraph homeData = {homeData} travelData = {travelData} foodData = {foodData}  />
       ) : (
         <BarGraph data={data} labels={labels} key={String(data)} />
       )}
+          </Col>
+        </Row>
+      </Container>
+
     </>
   )
 }

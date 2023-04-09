@@ -7,6 +7,7 @@ import { Bar } from 'react-chartjs-2';
 
 
 
+
 export default class BarGraph extends React.Component {
   constructor(props) {
     super(props)
@@ -34,8 +35,8 @@ export default class BarGraph extends React.Component {
 
   render() {
     return (
-      <div style={{ width: '500px', height: '300px' }}>
-        <Bar
+      <div style={{ width: '100%', height: '500px'}} >
+        <Bar 
           data={this.s}
           options={{
             scales: {
