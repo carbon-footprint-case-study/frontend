@@ -76,7 +76,7 @@ class Food extends Component {
           <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
             <InputCard
               icon={<img src={chiken} alt="hellow" style={{ width: "50px", height: "50px", marginRight: "10px" }} />}
-              title="Chiken"
+              title="Chicken"
               units={["kg/week"]}
               handler={this.handler}
             />

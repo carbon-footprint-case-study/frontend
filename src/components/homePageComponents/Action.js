@@ -1,11 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import ActionCard from "../ActionCard";
 
 function Action(props) {
   const totalData = props.totalData;
   const homeData = props.homeData;
-  const travelData = props.travelData;
-  const foodData = props.foodData;
+  // const travelData = props.travelData;
+  // const foodData = props.foodData;
+  const footPrint = totalData.reduce((a , b) => (a + b)) / 1000
 
   // let mx = Math.max(totalData[0], Math.max(totalData[1], totalData[2]));
   let heading;
@@ -57,11 +59,12 @@ function Action(props) {
       </div>
     );
   }
-
+  
   return (
     <Container>
       <Row className="justify-content-md-center my-5">
         <Col className="my-1" xs={{ span: 12 }} md={{ span: 10 }}>
+      <ActionCard footprint = {footPrint}/>
           {heading}
           {content}
         </Col>
