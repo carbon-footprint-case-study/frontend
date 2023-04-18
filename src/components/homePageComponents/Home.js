@@ -12,11 +12,11 @@ class Home extends Component {
     this.state = {
       e: [0, 0, 0],
     };
-    this.rm = "Rs./month";
+   
 
-    this.elecUnit = [this.rm, "KWhr/month"];
+    this.elecUnit = ["KWhr/month"];
     this.lpgUnit = ["cylinder/month", "litre/month"];
-    this.waterUnit = [this.rm, "litre/month"];
+    this.waterUnit = ["litre/month"];
 
     this.handler = props.handler;
   }

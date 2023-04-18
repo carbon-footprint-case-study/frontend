@@ -10,6 +10,7 @@ import ContactForm from "./components/contactForm/contactform";
 import BarGraph from './components/homePageComponents/BarGraph'
 import Sustainable from "./components/information/Sustainable";
 import FrontPage from "./components/frontPage/FrontPage";
+import References from "./components/information/References";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
 
           <Route path="/information/deforestaion" element={<Deforestation />} />
+          <Route path="/information/references" element={<References />} />
           <Route path="/information/sustainable-development" element={<Sustainable/>} />
           <Route path="/information/climate" element={<Climate/>} />
           <Route path="/aboutus" element={<AboutUs />} />
